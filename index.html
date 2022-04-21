@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="utf-8">
-    <title>My Awesome Website</title>
-    <meta name="author" content="Put your name here">
-    
-    <!-- If you are using p5.js to create drawings or games, uncomment the next line: -->
-    <!--
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Sleepy Shop</title>
+  <meta name="author" content="Damian Kim and Alex Hansen">
 
-<body>
-  <header>
-    <h1 class="page-title">My Awesome Website</h1>
-    <p>This is some awesome text.</p>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <header class="main-header">
+    <h1 class="page-title">Sleepy Shop</h1>
   </header>
-
+  <main class="main-content">
+    <ul class="thumbnail-list">
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Pink Blanket" data-image-url="img/pinkblanket.jpg">
+          <img class="thumbnail-image" src="img/pinkblanket.jpg">
+          <span class="thumbnail=title">Pink Blanket</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Red Blanket" data-image-url="img/redblanket.jpg">
+          <img class="thumbnail-image" src="img/redblanket.jpg">
+          <span class="thumbnail-title">Red Blanket</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Blue Blanket" data-image-url="img/blueblanket.jpg">
+          <img class="thumbnail-image" src="img/blueblanket.jpg">
+          <span class="thumbnail=title">Blue Blanket</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Fun Pillow" data-image-url="img/funpillow.jpg">
+          <img class="thumbnail-image" src="img/funpillow.jpg">
+          <span class="thumbnail-title">Fun Pillow</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Boring Pillow" data-image-url="img/boringpillow.jpg">
+          <img class="thumbnail-image" src="img/boringpillow.jpg">
+          <span class="thumbnail-title">Boring Pillow</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Striped Pajamas" data-image-url="img/stripedpajamas.jpg">
+          <img class="thumbnail-image" src="img/stripedpajamas.jpg">
+          <span class="thumbnail-title">Striped Pajamas</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#" data-image-role="trigger" data-image-title="Spotted Pajamas" data-image-url="img/spottedpajamas.jpg">
+          <img class="thumbnail-image" src="img/spottedpajamas.jpg">
+          <span class="thumbnail-title">Spotted Pajamas</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+  <section>
+    <div class="card card-default">
+      <form data-shopping-order="form">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </form>
+    </div>
+    <div class="card card-default">
+      <div class="card-body">
+        <h4>Pending Orders:</h4>
+        <div data-coffee-order="checklist">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+          charset="utf-8"></script>
+  <script src="scripts/validation.js" charset="utf-8"></script>
+  <script src="scripts/checklist.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js"></script>
 </body>
+
 </html>
