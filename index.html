@@ -20,7 +20,7 @@
       <li class="thumbnail-item">
         <a href="#" data-image-role="trigger" data-image-title="Pink Blanket" data-image-url="img/pinkblanket.jpg">
           <img class="thumbnail-image" src="img/pinkblanket.jpg">
-          <span class="thumbnail=title">Pink Blanket</span>
+          <span class="thumbnail-title">Pink Blanket</span>
         </a>
       </li>
       <li class="thumbnail-item">
@@ -32,7 +32,7 @@
       <li class="thumbnail-item">
         <a href="#" data-image-role="trigger" data-image-title="Blue Blanket" data-image-url="img/blueblanket.jpg">
           <img class="thumbnail-image" src="img/blueblanket.jpg">
-          <span class="thumbnail=title">Blue Blanket</span>
+          <span class="thumbnail-title">Blue Blanket</span>
         </a>
       </li>
       <li class="thumbnail-item">
@@ -64,6 +64,11 @@
   <section>
     <div class="card card-default">
       <form data-shopping-order="form">
+        <div class="form-group">
+          <label for="emailInput">Email</label>
+          <input class="form-control" type="email" name="emailAddress" id="emailInput" value=""
+            placeholder="user@company.com" required>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-secondary">Reset</button>
       </form>
@@ -71,7 +76,7 @@
     <div class="card card-default">
       <div class="card-body">
         <h4>Pending Orders:</h4>
-        <div data-coffee-order="checklist">
+        <div data-shopping-order="checklist">
         </div>
       </div>
     </div>
