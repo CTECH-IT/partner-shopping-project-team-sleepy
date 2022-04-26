@@ -20,9 +20,9 @@
 
     CheckList.prototype.removeRow = function (email) {
         this.$element
-        .find('[value="' + email + '"]')
-        .closest('[data-shopping-order="checkbox"]')
-        .remove();
+            .find('[value="' + email + '"]')
+            .closest('[data-shopping-order="checkbox"]')
+            .remove();
     };
 
     CheckList.prototype.addClickHandler = function (func) {
@@ -50,7 +50,7 @@
         }
         description += shoppingOrder.shopping + ', ';
         description += ' (' + shoppingOrder.emailAddress + ')';
-        description += ' [' + shoppingOrder.strength + 'x]';
+        description += ' [' + shoppingOrder.orderedItems + 'x]';
 
         $label.append($checkbox);
         $label.append(description);
