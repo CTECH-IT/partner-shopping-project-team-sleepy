@@ -44,13 +44,16 @@
             value: shoppingOrder.emailAddress
         });
 
-        let description = shoppingOrder.shopping + ', ';
-        if (shoppingOrder.flavor) {
-            description += shoppingOrder.flavor + ' ';
+        let description = shoppingOrder.emailAddress + ': ';
+        let items = ['pinkBlanket', 'redBlanket', 'blueBlanket', 'funPillow', 'boringPillow', 'stripedPajamas', 'spottedPajamas'];
+        
+        console.log(shoppingOrder);
+        for (let item of items) {
+            console.log(item);
+            if (shoppingOrder.hasOwnProperty(item)) {
+                description += shoppingOrder[item] + '; ';
+            }
         }
-        description += shoppingOrder.shopping + ', ';
-        description += ' (' + shoppingOrder.emailAddress + ')';
-        description += ' [' + shoppingOrder.orderedItems + 'x]';
 
         $label.append($checkbox);
         $label.append(description);

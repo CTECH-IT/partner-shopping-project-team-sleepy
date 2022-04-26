@@ -16,73 +16,68 @@
     <h1 class="page-title">Sleepy Shop</h1>
   </header>
   <main class="main-content">
-    <ul class="thumbnail-list">
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Pink Blanket" data-image-url="img/pinkblanket.jpg">
+    <form id="orderForm" data-shopping-order="form">
+      <ul class="thumbnail-list">
+        <label for="pinkBlanket" class="thumbnail-item">
           <img class="thumbnail-image" src="img/pinkblanket.jpg">
           <span class="thumbnail-title">Pink Blanket</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Red Blanket" data-image-url="img/redblanket.jpg">
+          <input class="itemCheckbox" type="checkbox" id="pinkBlanket" name="pinkBlanket" value="Pink Blanket">
+        </label>
+        <label for="redBlanket" class="thumbnail-item">
           <img class="thumbnail-image" src="img/redblanket.jpg">
           <span class="thumbnail-title">Red Blanket</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Blue Blanket" data-image-url="img/blueblanket.jpg">
+          <input class="itemCheckbox" type="checkbox" id="redBlanket" name="redBlanket" value="Red Blanket">
+        </label>
+        <label for="blueBlanket" class="thumbnail-item">
           <img class="thumbnail-image" src="img/blueblanket.jpg">
           <span class="thumbnail-title">Blue Blanket</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Fun Pillow" data-image-url="img/funpillow.jpg">
+          <input class="itemCheckbox" type="checkbox" id="blueBlanket" name="blueBlanket" value="Blue Blanket">
+        </label>
+        <label for="funPillow" class="thumbnail-item">
           <img class="thumbnail-image" src="img/funpillow.jpg">
           <span class="thumbnail-title">Fun Pillow</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Boring Pillow" data-image-url="img/boringpillow.jpg">
-          <img class="thumbnail-image" src="img/boringpillow.jpg">
-          <span class="thumbnail-title">Boring Pillow</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Striped Pajamas" data-image-url="img/stripedpajamas.jpg">
-          <img class="thumbnail-image" src="img/stripedpajamas.jpg">
-          <span class="thumbnail-title">Striped Pajamas</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#" data-image-role="trigger" data-image-title="Spotted Pajamas" data-image-url="img/spottedpajamas.jpg">
-          <img class="thumbnail-image" src="img/spottedpajamas.jpg">
-          <span class="thumbnail-title">Spotted Pajamas</span>
-        </a>
-      </li>
-    </ul>
+          <input class="itemCheckbox" type="checkbox" id="funPillow" name="funPillow" value="Fun Pillow">
+        </label>
+        <label for="boringPillow" class="thumbnail-item">
+            <img class="thumbnail-image" src="img/boringpillow.jpg">
+            <span class="thumbnail-title">Boring Pillow</span>
+            <input class="itemCheckbox" type="checkbox" id="boringPillow" name="boringPillow" value="Boring Pillow">
+        </label>
+        <label for="stripedPajamas" class="thumbnail-item">
+            <img class="thumbnail-image" src="img/stripedpajamas.jpg">
+            <span class="thumbnail-title">Striped Pajamas</span>
+            <input class="itemCheckbox" type="checkbox" id="stripedPajamas" name="stripedPajamas" value="Striped Pajamas">
+        </label>
+        <label for="spottedPajamas" class="thumbnail-item">
+            <img class="thumbnail-image" src="img/spottedpajamas.jpg">
+            <span class="thumbnail-title">Spotted Pajamas</span>
+            <input class="itemCheckbox" type="checkbox" id="spottedPajamas" name="spottedPajamas" value="Spotted Pajamas">
+        </label>
+      </ul>
+      
+      <section>
+        <div class="card card-default">
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value=""
+              placeholder="user@company.com" required>
+          </div>
+          <span class="cart">My Cart: </span>
+          <span class="cart">   </span>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+        <div class="card card-default">
+          <div class="card-body">
+            <h4>Pending Orders:</h4>
+            <div data-shopping-order="checklist">
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    
   </main>
-  <section>
-    <div class="card card-default">
-      <form data-shopping-order="form">
-        <div class="form-group">
-          <label for="emailInput">Email</label>
-          <input class="form-control" type="email" name="emailAddress" id="emailInput" value=""
-            placeholder="user@company.com" required>
-        </div>
-        <span class="cart">My Cart: </span>
-        <span class="cart">   </span>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-secondary">Reset</button>
-      </form>
-    </div>
-    <div class="card card-default">
-      <div class="card-body">
-        <h4>Pending Orders:</h4>
-        <div data-shopping-order="checklist">
-        </div>
-      </div>
-    </div>
-  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
           charset="utf-8"></script>
   <script src="scripts/validation.js" charset="utf-8"></script>

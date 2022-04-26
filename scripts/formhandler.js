@@ -22,6 +22,8 @@
             event.preventDefault();
 
             let data = {};
+            console.log($(this));
+            console.log($(this).serializeArray());
             $(this).serializeArray().forEach(function (item) {
                 data[item.name] = item.value;
                 console.log(item.name + ' is ' + item.value);
