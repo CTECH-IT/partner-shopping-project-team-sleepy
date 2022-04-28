@@ -86,7 +86,7 @@ a[href="#"] {
 
 .thumbn
 .detail-image {
-    width: 90%;
+    width: 80%;
 }
 
 .detail-image-container {
@@ -130,3 +130,10 @@ a[href="#"] {
 .hidden-detail .thumbnail-item {
     max-width: 80%
 }
+
+.container {
+    width: 60%;
+    margin: 2rem auto; 
+  }
+  
+
