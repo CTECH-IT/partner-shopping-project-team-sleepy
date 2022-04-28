@@ -10,9 +10,7 @@
     let DataStore = App.DataStore;
     let RemoteDataStore = App.RemoteDataStore;
     let LocalDataStore = App.LocalDataStore;
-    let FormHandler = App.FormHandler;
     let CheckList = App.CheckList;
-    let Validation = App.Validation;
 
     let remoteDS = new RemoteDataStore(SERVER_URL);
     let localDS = new LocalDataStore();
@@ -20,25 +18,18 @@
     let myTruck = new Truck('12345', localDS);
     window.myTruck = myTruck;
 
-    //let checkList = new CheckList(CHECKLIST_SELECTOR);
+    let checkList = new CheckList(CHECKLIST_SELECTOR);
+    
+    let data = localDS.getAll();
 
-    let formHandler = new FormHandler(FORM_SELECTOR);
+    for (let order in data) {
+        checkList.addRow(data[order]);
+    }
 
     
 
     
-
-    formHandler.addSubmitHandler(function (data) {
-        console.log(data);
-        myTruck.createOrder(data);
-        //checkList.addRow(data);
-        //localDS.add(data);
-    })
-    
-    //checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
-
-    
-    formHandler.addInputHandler(Validation.isCompanyEmail);
+    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 
 })(window);
